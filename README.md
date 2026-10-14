@@ -18,13 +18,18 @@ Visual tokens come from Brand Designer + Anti-Slop Critic (paper background, Sou
 
 `server.py` looks for `../lattice-vault/vault.py`, then `../lattice-vault-release/vault.py`. Override: `VAULT_SRC=/path/to/vault`.
 
+## Clone
+
+```sh
+git clone https://github.com/keremtalhaoral/lattice-vault.git
+git clone https://github.com/keremtalhaoral/lattice-vault-ui-v2.git
+```
+
 ## Run
 
 ```sh
 # seed a demo DB (uses sibling vault examples/seed.py)
-python3 ../lattice-vault-release/examples/seed.py demo
-# or, if you have lattice-vault with vault.py:
-# python3 ../lattice-vault/examples/seed.py demo
+python3 ../lattice-vault/examples/seed.py demo
 
 VAULT_DB=demo/vault.db python3 server.py
 # open http://127.0.0.1:8765/
